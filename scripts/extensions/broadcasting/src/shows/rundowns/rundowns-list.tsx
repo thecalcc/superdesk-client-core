@@ -237,6 +237,9 @@ export class RundownsList extends React.PureComponent<IProps> {
                                         this.props.onEditModeChange(rundown._id);
                                     }}
                                 />
+                                <br />
+                                <br />
+                                <div>{JSON.stringify(rundown.items_data)}</div>
                             </div>
                         )}
                         noItemsTemplate={() => {

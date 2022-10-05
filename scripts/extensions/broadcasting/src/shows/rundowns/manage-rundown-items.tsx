@@ -12,6 +12,7 @@ import {DurationLabel} from './components/duration-label';
 import {PlannedDurationLabel} from './components/planned-duration-label';
 import {IMenuItem} from 'superdesk-ui-framework/react/components/Dropdown';
 import {noop} from 'lodash';
+import {TableListRundownItems} from './components/table-list-rundown-items';
 const {vocabulary} = superdesk.entities;
 const {Spacer, SpacerBlock} = superdesk.components;
 
@@ -91,6 +92,25 @@ export class ManageRundownItems<T extends IRundownItemBase | IRundownItem> exten
                         );
                     })()
                 }
+
+                {/* <TableListRundownItems
+                    dragAndDrop={true}
+                    addItem={true}
+                    initiateCreation={this.props.initiateCreation}
+                    initiateEditing={this.props.initiateEditing}
+                    initiatePreview={this.props.initiatePreview}
+                    items={this.props.items}
+                    onChange={this.props.onChange}
+                    onDelete={this.props.onDelete}
+                    readOnly={this.props.readOnly}
+                    onDrag={(oldIndex, newIndex) => {
+                        if (this.props.readOnly !== true) {
+                            this.props.onChange(
+                                arrayMove(this.props.items, oldIndex, newIndex),
+                            );
+                        }
+                    }}
+                /> */}
 
                 <TableList
                     dragAndDrop
