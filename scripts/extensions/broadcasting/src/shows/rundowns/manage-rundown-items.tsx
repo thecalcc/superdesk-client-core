@@ -93,9 +93,9 @@ export class ManageRundownItems<T extends IRundownItemBase | IRundownItem> exten
                     })()
                 }
 
-                {/* <TableListRundownItems
-                    dragAndDrop={true}
-                    addItem={true}
+                <TableListRundownItems
+                    dragAndDrop
+                    addItem
                     initiateCreation={this.props.initiateCreation}
                     initiateEditing={this.props.initiateEditing}
                     initiatePreview={this.props.initiatePreview}
@@ -110,9 +110,9 @@ export class ManageRundownItems<T extends IRundownItemBase | IRundownItem> exten
                             );
                         }
                     }}
-                /> */}
+                />
 
-                <TableList
+                {/* <TableList
                     dragAndDrop
                     addItem
                     array={this.props.items.map((item) => {
@@ -275,7 +275,7 @@ export class ManageRundownItems<T extends IRundownItemBase | IRundownItem> exten
                             );
                         }
                     }}
-                />
+                /> */}
 
                 {
                     // TODO: remove when ui-framework component is adjusted to show plus button with empty list

@@ -23,14 +23,14 @@ interface IProps<T> {
     initiateEditing(item: T): void;
     initiatePreview(item: T): void;
     readOnly: boolean;
-    actions?: () => JSX.Element;
+    actions?(): JSX.Element;
     dragAndDrop?: boolean;
     addItem?: boolean;
     itemsDropdown?: Array<IMenuItem | ISubmenu | IMenuGroup | 'divider'>;
     onDrag?(start: number, end: number): void;
 }
 
-export class TableListRundownItems<T extends IRundownItem> extends React.PureComponent<IProps<T>> {
+export class TableListRundownItems<T extends IRundownItem | IRundownItemBase> extends React.PureComponent<IProps<T>> {
     render() {
         const {readOnly} = this.props;
 
