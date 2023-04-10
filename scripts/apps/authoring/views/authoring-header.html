@@ -77,6 +77,8 @@
                 </div>
             </div>
 
+            <input class="custom-test-for-stuff" type="text" />
+
             <div ng-if="translationService.translationsEnabled() && translationsInfo != null">
                 <span ng-if="item.translated_from != null" class="authoring-header__label-2" translate>Translated from</span>
                 <span ng-if="item.translated_from != null" class="label label--hollow">{{translationsInfo.translatedFromReference.language}}</span>
@@ -635,5 +637,5 @@
 </div>
 
 <div class="authoring-header__toggle-container">
-    <button class="authoring-header__toggle" ng-class="{active: isCollapsed}" ng-click="toggleCollapsed()" tabindex="-1"><i class="icon-chevron-up-thin"></i></button>    
+    <button class="authoring-header__toggle" ng-class="{active: isCollapsed}" ng-click="toggleCollapsed()" tabindex="-1"><i class="icon-chevron-up-thin"></i></button>
 </div>
